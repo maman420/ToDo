@@ -1,0 +1,15 @@
+<table class="table table-striped-columns">
+    <tr>
+        <th scope="col">title</th>
+        <th scope="col">is done</th>
+        <th scope="col"><a routerLink="/add-task">Add Task</a></th>
+    </tr>
+    <ng-container *ngFor="let task of taskList">
+        <tr>
+            <td>{{task.title}}</td>
+            <td>{{task.isComplete}}</td>
+            <td><button (click)="delete(task.id)">delete</button></td>
+            <td><a [routerLink]="['/add-task', task.id]">edit</a></td>
+        </tr>
+    </ng-container>
+</table>

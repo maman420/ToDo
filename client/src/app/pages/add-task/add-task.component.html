@@ -1,0 +1,12 @@
+<p>add-task works!</p>
+<form>
+    <Label>
+        title:
+        <input [(ngModel)]="task.title" name="title">
+    </Label><br/>
+    <Label>
+        isCompole:
+        <input type="checkbox" [(ngModel)]="task.isComplete" name="isComplete" [checked]="task.isComplete">
+    </Label><br/>
+    <button (click)="onSubmitHandler()">submit</button>
+</form>
